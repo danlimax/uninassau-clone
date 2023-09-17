@@ -5,135 +5,143 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
-      name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
     />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="global.css" />
+    <link href="global.css" rel="stylesheet" />
     <link
-      rel="stylesheet"
+      crossorigin="anonymous"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+      rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./assets/favicon.png" rel="shortcut icon" type="image/x-png" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <a
-        class="navbar-brand"
-        href="http://www.uninassau.edu.br/"
-        target="_blank"
-        ><img
-          src="./assets/uninassau.png"
-          alt="Logo clicável da faculdade Uninassau na barra de navegação"
-      /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Alterna navegação"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <header class="header-container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a
+          class="navbar-brand"
+          href="http://www.uninassau.edu.br/"
+          target="_blank"
+          ><img
+            alt="Logo clicável da faculdade Uninassau na barra de navegação"
+            src="./assets/uninassau.png"
+        /></a>
+       
+        <div
+          class="d-flex justify-content-center collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link " href="#">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link " href="#">Destaques</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Preços</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Informaçõe
+              </a>
+              <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+                <a class="dropdown-item" href="#">Graduação</a>
+                <a class="dropdown-item" href="#">Regras da instituição</a>
+                <a class="dropdown-item" href="#">Manual do aluno</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex collapse navbar-collapse justify-content-center">
+          <select class="region-options text-center">
+            <option value="">Selecione a região</option>
+            <option value="aracaju">Aracaju-SE</option>
+            <option value="joao-pessoa">João Pessoa-PB</option>
+            <option value="maceio">Maceió-AL</option>
+            <option value="recife">Recife-PE</option>
+            
+            
+          </select>
+        </div>
+        <div class="d-flex collapse navbar-collapse justify-content-end">
+          <a class=" nav-link text-body" href="#"><span>Área do aluno</span></a>
+        </div>
+      </nav>
+    </header>
+    
+    <main class="content-container d-flex flex-column container">
       <div
-        class="d-flex justify-content-center collapse navbar-collapse"
-        id="navbarNavDropdown"
-      >
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Destaques</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Preços</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Informaçõe
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Graduação</a>
-              <a class="dropdown-item" href="#">Regras da instituição</a>
-              <a class="dropdown-item" href="#">Manual do aluno</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <main class="d-flex flex-column container">
-      <div
-        id="carouselExampleIndicators"
         class="carousel slide mt-5"
         data-ride="carousel"
+        id="carouselExampleIndicators"
       >
         <ol class="carousel-indicators">
           <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
             class="active"
+            data-slide-to="0"
+            data-target="#carouselExampleIndicators"
           ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-slide-to="1" data-target="#carouselExampleIndicators"></li>
+          <li data-slide-to="2" data-target="#carouselExampleIndicators"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
+              alt="Primeiro Slide"
               class="d-block w-100"
               src="./assets/carousel-A.jpg"
-              alt="Primeiro Slide"
             />
           </div>
           <div class="carousel-item">
             <img
+              alt="Segundo Slide"
               class="d-block w-100"
               src="./assets/carousel-B.jpg"
-              alt="Segundo Slide"
             />
           </div>
           <div class="carousel-item">
             <img
+              alt="Terceiro Slide"
               class="d-block w-100"
               src="./assets/carousel-C.jpg"
-              alt="Terceiro Slide"
             />
           </div>
         </div>
         <a
           class="carousel-control-prev"
+          data-slide="prev"
           href="#carouselExampleIndicators"
           role="button"
-          data-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span aria-hidden="true" class="carousel-control-prev-icon"></span>
           <span class="sr-only">Anterior</span>
         </a>
         <a
           class="carousel-control-next"
+          data-slide="next"
           href="#carouselExampleIndicators"
           role="button"
-          data-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span aria-hidden="true" class="carousel-control-next-icon"></span>
           <span class="sr-only">Próximo</span>
         </a>
       </div>
       <div class="intro-container mt-4">
-        <h1 id="intro-title" class="intro-title text-center">
+        <h1 class="intro-title text-center" id="intro-title">
           Venha fazer parte da nossa instituição
         </h1>
         <p class="intro-text text-center">
@@ -149,17 +157,18 @@
           tenetur ea nam blanditiis explicabo ut laudantium?
         </p>
       </div>
-      <div class="promotional-container align-self-center w-100 mb-5 mt-5">
+      <div class="promotional-container align-self-center w-100 mb-5 mt-5" data-aos="fade-down"
+      data-aos-duration="500">
         <a href="#"
           ><img
+            alt="Imagem promocional clicável da uninassau"
             class="promotional-image w-100"
             src="./assets/promotional.jpg"
-            alt="Imagem promocional clicável da uninassau"
         /></a>
       </div>
-      <section class="cards-container mb-5">
-        <div class="row">
-          <div class="col-sm-6">
+      <section class="cards-container mb-5" >
+        <div class="row" >
+          <div class="col-sm-6"  data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" >
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Cursos de extensão</h5>
@@ -167,11 +176,11 @@
                   Com suporte a texto embaixo, que funciona como uma introdução
                   a um conteúdo adicional.
                 </p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <a class="btn btn-primary" href="#">Visitar</a>
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6" data-aos="zoom-in"  data-aos-delay="1000" data-aos-duration="1000" >
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Cursos de graduação</h5>
@@ -179,7 +188,7 @@
                   Com suporte a texto embaixo, que funciona como uma introdução
                   a um conteúdo adicional.
                 </p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <a class="btn btn-primary" href="#">Visitar</a>
               </div>
             </div>
           </div>
@@ -208,24 +217,35 @@
             <a class="nav-item nav-link text-light" href="#">Fale conosco</a>
           </ul>
         </div>
+        <div class="address-container collapse navbar-collapse mt-5" style="width: 5%;">
+          <p class="address text-white text-center mb-0">
+            Av. Augusto Franco, 2340 - Siqueira Campos, Aracaju - SE, 49075-470
+            <br>
+            Cnpj: 04.986.320/0001-13
+          </p>
+        </div>
       </nav>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      crossorigin="anonymous"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      crossorigin="anonymous"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     ></script>
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
